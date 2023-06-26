@@ -3,11 +3,11 @@ require('dotenv').config();
 
 // untuk konfigurasi koneksi
 const koneksi = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT,
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLNAME,
+    port: process.env.MYSQLPORT,
     multipleStatements: true
 });
 
