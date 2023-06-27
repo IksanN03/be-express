@@ -8,7 +8,7 @@ require('dotenv').config();
 const multer = require('multer');
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './document')
+        cb(null, './uploads')
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname)
@@ -25,7 +25,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/static', express.static(path.join(__dirname, 'document')))
+app.use('/static', express.static(path.join(__dirname, 'uploads')))
 //user
 app.post('/api/register', register);
 app.post('/api/login', login);

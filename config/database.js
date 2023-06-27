@@ -3,11 +3,11 @@ require('dotenv').config();
 
 // untuk konfigurasi koneksi
 const koneksi = mysql.createConnection({
-    host: process.env.MYSQLHOST,
-    user: process.env.MYSQLUSER,
-    password: process.env.MYSQLPASSWORD,
-    database: process.env.MYSQLDATABASE,
-    port: process.env.MYSQLPORT,
+    host: "bybjbd0by6pim2odaelx-mysql.services.clever-cloud.com",
+    user: "uhi4fuacjcry1edq",
+    password: "aEclkt1dH8w2yRGfSdR5",
+    database: "bybjbd0by6pim2odaelx",
+    port: "3306",
     multipleStatements: true
 });
 
