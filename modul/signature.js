@@ -20,7 +20,7 @@ const createRespon = (req, res) => {
     const querySql = 'INSERT INTO signature SET ?';
 
     // jalankan query
-    koneksi.query(querySql, { user_id: data.user_id, document_id: data.document_id, file_name: req.file.originalname }, (err, rows1, field) => {
+    koneksi.query(querySql, { user_id: data.user_id, document_id: data.document_id, file_name: req.file.originalname, status: 0 }, (err, rows1, field) => {
         // error handling
         if (err) {
             return res.status(500).json({ success: false, message: 'Gagal Mengirim respon form!', error: err });
